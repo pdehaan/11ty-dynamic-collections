@@ -1,0 +1,16 @@
+---
+title: Cities
+layout: base
+---
+
+<h1>Cities</h1>
+
+{% if collections.cities.length %}
+  <ul>
+    {% for city in collections.cities %}
+    <li><a href="{{ city.url | url }}">{{ city.data.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <h2>No cities?</h2>
+{% endif %}
